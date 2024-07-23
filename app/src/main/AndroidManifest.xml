@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.thanggun99.duoihinhbatchu.PlayActivity"/>
+        <activity android:name=".view.PlayActivity"/>
     </application>
 
 </manifest>

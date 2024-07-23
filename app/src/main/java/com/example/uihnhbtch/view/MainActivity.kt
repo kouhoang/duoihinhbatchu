@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uihnhbtch.R
-import com.thanggun99.duoihinhbatchu.PlayActivity
 
 class MainActivity :
     AppCompatActivity(),

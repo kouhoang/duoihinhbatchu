@@ -13,7 +13,7 @@
         android:theme="@style/Theme.GameDuoiHinhBatChu"
         tools:targetApi="31">
         <activity
-            android:name=".view.MainActivity"
+            android:name="com.example.gameduoihinhbatchu.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.PlayActivity" />
+        <activity android:name="com.example.gameduoihinhbatchu.view.PlayActivity" />
     </application>
 
 </manifest>

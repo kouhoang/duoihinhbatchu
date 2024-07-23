@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity"
+    tools:context="com.example.gameduoihinhbatchu.view.MainActivity"
     android:background="@drawable/bg_game_play">
 
     <TextView

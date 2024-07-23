@@ -1,11 +1,11 @@
-package com.example.uihnhbtch.view
+package com.example.gameduoihinhbatchu.view
 
 import android.app.Activity
 import android.os.Bundle
-import com.example.uihnhbtch.R
-import com.example.uihnhbtch.viewmodel.GameHandler
-import com.example.uihnhbtch.viewmodel.QuestionManager
-import com.example.uihnhbtch.viewmodel.UIManager
+import com.example.gameduoihinhbatchu.R
+import com.example.gameduoihinhbatchu.viewmodel.GameHandler
+import com.example.gameduoihinhbatchu.viewmodel.QuestionManager
+import com.example.gameduoihinhbatchu.viewmodel.UIManager
 
 class PlayActivity : Activity() {
     lateinit var gameHandler: GameHandler

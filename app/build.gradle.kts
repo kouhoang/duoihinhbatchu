@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.uihnhbtch"
+    namespace = "com.example.gameduoihinhbatchu"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.uihnhbtch"
+        applicationId = "com.example.gameduoihinhbatchu"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -17,12 +17,16 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -36,7 +40,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -45,5 +48,4 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
 }

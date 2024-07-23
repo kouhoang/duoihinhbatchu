@@ -1,4 +1,4 @@
-package com.example.uihnhbtch
+package com.example.gameduoihinhbatchu
 
 import org.junit.Test
 

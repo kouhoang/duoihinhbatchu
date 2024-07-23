@@ -1,11 +1,11 @@
-package com.example.uihnhbtch.viewmodel
+package com.example.gameduoihinhbatchu.viewmodel
 
 import android.os.Handler
 import android.os.HandlerThread
 import android.widget.TextView
 import android.widget.Toast
-import com.example.uihnhbtch.R
-import com.example.uihnhbtch.view.PlayActivity
+import com.example.gameduoihinhbatchu.R
+import com.example.gameduoihinhbatchu.view.PlayActivity
 
 class GameHandler(
     private val activity: PlayActivity,

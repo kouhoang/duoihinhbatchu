@@ -1,4 +1,4 @@
-package com.example.uihnhbtch.viewmodel
+package com.example.gameduoihinhbatchu.viewmodel
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,8 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.example.uihnhbtch.R
-import com.example.uihnhbtch.view.PlayActivity
+import com.example.gameduoihinhbatchu.R
+import com.example.gameduoihinhbatchu.view.PlayActivity
 import java.util.Random
 
 class UIManager(

@@ -63,13 +63,13 @@ class QuestionManager(
         answer = question.context
         val inflater = LayoutInflater.from(activity)
 
-        // Add answer buttons logic
+        // Thêm các nút đáp án
         activity.uiManager.addAnswerButtons(answer.length, inflater)
 
-        // Set image
+        // Đặt hình ảnh cho câu hỏi
         activity.findViewById<ImageView>(R.id.img_picture).setImageResource(question.id)
 
-        // Add character buttons logic
+        // Thêm các nút ký tự
         activity.uiManager.addCharButtons(answer, inflater, random)
     }
 
@@ -77,11 +77,18 @@ class QuestionManager(
         id: Int,
         char: String,
     ) {
-        listChar.add(IDButton(id, 16 + pst))
-        activity.findViewById<Button>(16 + pst).text = char
-        pst++
-        if (pst == answer.length) {
-            gameHandler.checkAnswer()
+        // Duyệt qua các ô đáp án để tìm vị trí trống đầu tiên
+        for (i in 16 until 16 + answer.length) {
+            val answerButton = activity.findViewById<Button>(i)
+            if (answerButton.text.isEmpty()) {
+                listChar.add(IDButton(id, i))
+                answerButton.text = char
+                pst++
+                if (pst == answer.length) {
+                    gameHandler.checkAnswer()
+                }
+                return
+            }
         }
     }
 
@@ -115,6 +122,8 @@ class QuestionManager(
         return currentAnswer.equals(answer, ignoreCase = true)
     }
 
+    fun isLastQuestion(): Boolean = currentIndex >= listQuestions.size - 1
+
     fun newQuestion() {
         if (currentIndex < listQuestions.size - 1) {
             listChar.clear()
@@ -123,5 +132,15 @@ class QuestionManager(
             currentIndex++
             makeQuestion()
         }
+    }
+
+    fun restartGame() {
+        listChar.clear()
+        activity.uiManager.resetForNewQuestion()
+        pst = 0
+        currentIndex = 0
+        activity.uiManager.txtHeart.text = "5"
+        activity.uiManager.txtPoint.text = "0"
+        makeQuestion()
     }
 }

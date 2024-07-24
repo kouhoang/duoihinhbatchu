@@ -15,6 +15,7 @@ class UIManager(
     private val questionManager: QuestionManager,
 ) {
     lateinit var btntiep: Button
+    lateinit var btnPlayAgain: Button
     lateinit var txtHeart: TextView
     lateinit var txtPoint: TextView
     lateinit var imgPicture: ImageView
@@ -26,6 +27,8 @@ class UIManager(
     fun initComponents() {
         btntiep = activity.findViewById(R.id.btn_next)
         btntiep.setOnClickListener { questionManager.newQuestion() }
+        btnPlayAgain = activity.findViewById(R.id.btn_play_again)
+        btnPlayAgain.setOnClickListener { questionManager.restartGame() }
         imgPicture = activity.findViewById(R.id.img_picture)
         lnAnswer1 = activity.findViewById(R.id.anwser1)
         lnAnswer2 = activity.findViewById(R.id.anwser2)
@@ -107,7 +110,11 @@ class UIManager(
             }
         }
         if (isCorrect) {
-            btntiep.visibility = View.VISIBLE
+            if (questionManager.isLastQuestion()) {
+                btnPlayAgain.visibility = View.VISIBLE
+            } else {
+                btntiep.visibility = View.VISIBLE
+            }
         }
     }
 
@@ -123,5 +130,6 @@ class UIManager(
         lnCh1.removeAllViews()
         lnCh2.removeAllViews()
         btntiep.visibility = View.INVISIBLE
+        btnPlayAgain.visibility = View.INVISIBLE
     }
 }

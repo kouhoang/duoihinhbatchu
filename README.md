@@ -10,7 +10,8 @@ Game Đuổi Hình Bắt Chữ là một trò chơi giải trí thú vị, nơi 
 - **Giao diện người dùng**: Giao diện trực quan với các nút đáp án và ký tự.
 - **Điểm số và mạng sống**: Theo dõi điểm số và số mạng sống còn lại (số mạng sống ban đầu là 5 và cứ mỗi một câu đúng người chơi sẽ có 100 điểm).
 - **Chế độ chơi lại**: Có thể chơi lại từ đầu sau khi hoàn thành trò chơi.
-- **Nút tiếp tục và chơi lại**: Sau khi trả lời đúng một câu hỏi, người chơi có thể chuyển đến câu hỏi tiếp theo hoặc chơi lại toàn bộ trò chơi khi kết thúc.
+- **Nút tiếp tục**: Sau khi trả lời đúng một câu hỏi, người chơi có thể chuyển đến câu hỏi tiếp theo.
+- **Sửa đáp án sai**: Người chơi có thể ấn vào ký tự đáp án để xóa nó đi và chọn ký tự khác để thay thế.
 
 ## Cách chơi
 

@@ -23,4 +23,4 @@ Game Đuổi Hình Bắt Chữ là một trò chơi giải trí thú vị, nơi 
 
 1. **Clone repository**:
    ```bash
-   git clone https://github.com/your-repository-url.git
+   git clone https://github.com/kouhoang/duoihinhbatchu.git
